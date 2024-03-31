@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import HomePage, home
+from .views import HomePage, GetRequestView, PostRequestView, GetResponseView
 urlpatterns = [
     path('get/', HomePage.as_view(), name="homepage"),
-    path('home/', home, name='home'),
+    path('get/request/', GetRequestView, name='home'),
+    path('post/request/', PostRequestView),
+    path('get/response/', GetResponseView),
     
 ]
